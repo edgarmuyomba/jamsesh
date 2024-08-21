@@ -1,0 +1,53 @@
+div.current {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 1rem;
+    gap: 1rem;
+}
+
+div.album {
+    height: 93%;
+    width: 100%;
+    background-color: lightgray;
+    border-radius: 5px;
+}
+
+div.info {
+    height: 5%;
+    background-color: rgb(231, 231, 231);
+    width: 100%;
+    display: flex;
+    align-items: center;
+    padding: 0 0.3rem;
+}
+
+div.info p.text {
+    font-size: 0.8rem;
+}
+
+div.controls {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50%;
+    /* border: 1px solid red; */
+    height: 7%;
+    gap: 0.5rem;
+    padding: 0.2rem;
+    cursor: pointer;
+}
+
+div.prev, div.playpause, div.next {
+    height: 100%;
+}
+
+div.controls img {
+    height: 100%;
+    transition: 0.1s ease-in-out;
+}
+
+div.controls img:hover {
+    scale: 1.1;
+}
