@@ -4,8 +4,7 @@ export default function UI() {
     const playlistDiv = document.querySelector('div.playlist ul');
     const songsDiv = document.querySelector('div.songs ul');
     const songInfoDiv = document.querySelector('div.info > p.text')
-
-    const eventListeners = EventListeners();
+    const playPauseImage = document.querySelector('div.playpause img')
 
     const newSong = (song, isSong = false) => {
         const listItem = document.createElement('li');
@@ -80,11 +79,18 @@ export default function UI() {
         songInfoDiv.textContent = text
     }
 
+    const updatePlayPauseSong = (isPlaying) => {
+        isPlaying ?
+            playPauseImage.src = 'assets/pause.png' :
+            playPauseImage.src = 'assets/play.png'
+    }
+
     return {
         addToSongs,
         addToPlaylist,
         removeFromSongs,
         removeFromPlaylist,
-        updateCurrentSongInfo
+        updateCurrentSongInfo,
+        updatePlayPauseSong
     }
 }

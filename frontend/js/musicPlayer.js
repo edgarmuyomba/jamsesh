@@ -32,8 +32,8 @@ export default (() => {
     const prevSong = () => { }
 
     return {
-        isPlaying,
-        currentSong,
+        get isPlaying() { return isPlaying },
+        get currentSong() { return currentSong },
         setCurrentState,
         setCurrentSong,
         playPauseSong,

@@ -1,12 +1,15 @@
-import { websocket } from "./script.js"
 import { songListInstance } from "./script.js";
 import musicPlayer from "./musicPlayer.js";
+import UI from "./ui.js";
+import websocketHandler from "./websocketHandler.js";
 
 export function EventListeners() {
 
+    const ui = UI()
+
     const addSongToPlaylist = (event) => {
         const button = event.currentTarget;
-        
+
         let id = parseInt(button.dataset.id);
         let song = songListInstance.getSongById(id);
         if (song) {
@@ -14,8 +17,8 @@ export function EventListeners() {
                 type: 'add',
                 id: id
             };
-            
-            websocket.send(JSON.stringify(event));
+
+            websocketHandler.sendMessage(event);
         }
     }
 
@@ -30,11 +33,14 @@ export function EventListeners() {
                 id: id
             }
 
-            websocket.send(JSON.stringify(event))
+            websocketHandler.sendMessage(event);
         }
     }
 
-    const playPauseSong = () => musicPlayer.playPauseSong()
+    const playPauseSong = () => {
+        musicPlayer.playPauseSong()
+        ui.updatePlayPauseSong(musicPlayer.isPlaying)
+    }
 
     return {
         addSongToPlaylist,

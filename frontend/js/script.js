@@ -2,8 +2,9 @@ import Playlist from './playlist.js'
 import SongList from './songList.js'
 import musicPlayer from './musicPlayer.js';
 import { EventListeners } from './eventListeners.js';
+import websocket from './websocketHandler.js';
  
-export const websocket = new WebSocket('ws://127.0.0.1:8001/');
+// export const websocket = websocketHandler();
 
 export const playlistInstance = Playlist();
 
@@ -12,12 +13,12 @@ export const songListInstance = SongList();
 const eventListeners = EventListeners();
 window.eventListeners = eventListeners;
 
-websocket.onopen = () => {
-    const event = {
-        type: 'connect'
-    }
-    websocket.send(JSON.stringify(event))
-}
+// websocket.onopen = () => {
+//     const event = {
+//         type: 'connect'
+//     }
+//     websocket.send(JSON.stringify(event))
+// }
 
 
 websocket.onmessage = ({ data }) => {
