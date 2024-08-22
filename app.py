@@ -9,9 +9,9 @@ clients = []
 playlist = [
     {
         'id': 0,
-        'name': f'Follow Back',
-        'author': f'LXNGVX',
-        'url': f'https://www.song-{1}.com'
+        'name': 'Follow Back',
+        'author': 'LXNGVX',
+        'url': 'music/LXNGVX - Follow Back [NCS Release].mp3'
     }
 ]
 
