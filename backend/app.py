@@ -51,6 +51,13 @@ async def handler(websocket):
                     'song': id
                 }
                 websockets.broadcast(clients, json.dumps(event))
+        elif event['type'] == 'next':
+            event = {
+                'type': 'next'
+            }
+            for client in clients:
+                if client != websocket:
+                    await client.send(json.dumps(event))
 
 
 async def main():

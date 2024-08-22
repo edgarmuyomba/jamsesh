@@ -17,11 +17,12 @@ export default function Playlist() {
     }
 
     const removeSong = (song) => {
-        let index = songs.indexOf(song)
+        let index = songs.findIndex(s => s.id === song.id)
+        
         if (index > -1) {
             songs.splice(index, 1);
+            ui.removeFromPlaylist(song);
         }
-        ui.removeFromPlaylist(song);
     }
 
     return {

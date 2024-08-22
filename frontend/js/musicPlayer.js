@@ -1,5 +1,6 @@
 import { playlistInstance } from "./script.js";
 import UI from "./ui.js";
+import websocketHandler from "./websocketHandler.js";
 
 export default (() => {
 
@@ -29,7 +30,7 @@ export default (() => {
         isPlaying = !isPlaying
     }
 
-    const nextSong = () => { 
+    const nextSong = async (sendMessage = true) => { 
         const _songs = playlistInstance.songs
         if (_songs.length > 0) {
             let song = _songs[0]
@@ -39,6 +40,7 @@ export default (() => {
                 audioElement.play()
                 isPlaying = true
             }
+            sendMessage ? await websocketHandler.sendMessage({ type: 'next' }) : null
         }
     }
 

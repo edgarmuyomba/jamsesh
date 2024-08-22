@@ -4,6 +4,7 @@ export default (function () {
     let websocket = new WebSocket('ws://192.168.100.19:8001/')
     let connected = false
     let messageHandler = MessageHandler()
+    let messageQueue = []
 
     const connect = () => {
         return new Promise((res, rej) => {
@@ -21,7 +22,7 @@ export default (function () {
             }
 
             websocket.onclose = () => {
-                connected = false
+                reconnect()
             }
 
             websocket.onmessage = ({ data }) => {
@@ -37,20 +38,24 @@ export default (function () {
         await makeConnection
 
         if (connected && websocket) {
+            while (messageQueue.length) {
+                websocket.send(JSON.stringify(messageQueue.shift()));
+            }
             websocket.send(JSON.stringify(message))
         } else {
+            messageQueue.push(message)
             throw new Error("Websocket not connected")
         }
     }
 
-    const receiveMessage = (callback) => {
-        if (websocket) {
-            websocket.onmessage = (event) => callback(event)
-        }
+    const reconnect = () => {
+        connected = false;
+        setTimeout(() => {
+            makeConnection = connect()
+        }, 500)
     }
 
     return {
         sendMessage,
-        receiveMessage
     }
 })();

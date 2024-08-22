@@ -14,6 +14,10 @@ export default function MessageHandler() {
                 break;
             case 'remove':
                 remove(event)
+                break;
+            case 'next':
+                next(event)
+                break;
         }
     }
 
@@ -37,6 +41,10 @@ export default function MessageHandler() {
         if (song) {
             playlistInstance.removeSong(song)
         }
+    }
+
+    const next = (event) => {
+        musicPlayer.nextSong(false)
     }
 
     return {
