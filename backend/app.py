@@ -2,6 +2,7 @@ import asyncio
 import websockets
 import json
 from songs import songs
+from state import State
 
 clients = []
 
@@ -14,6 +15,9 @@ playlist = [
     }
 ]
 
+
+state = State()
+
 async def handler(websocket):
     async for message in websocket:
         event = json.loads(message)
@@ -23,7 +27,8 @@ async def handler(websocket):
             event = {
                 'type': 'connect',
                 'playlist': playlist,
-                'songs': songs
+                'songs': songs,
+                'state': state.currentState
             }
             await websocket.send(json.dumps(event))
         elif event['type'] == 'add':
@@ -47,9 +52,10 @@ async def handler(websocket):
                 }
                 websockets.broadcast(clients, json.dumps(event))
 
+
 async def main():
     async with websockets.serve(handler, "", 8001):
         await asyncio.Future()
 
-if __name__=='__main__':
+if __name__ == '__main__':
     asyncio.run(main())

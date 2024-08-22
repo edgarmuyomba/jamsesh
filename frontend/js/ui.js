@@ -3,6 +3,7 @@ import { EventListeners } from "./eventListeners.js";
 export default function UI() {
     const playlistDiv = document.querySelector('div.playlist ul');
     const songsDiv = document.querySelector('div.songs ul');
+    const songInfoDiv = document.querySelector('div.info > p.text')
 
     const eventListeners = EventListeners();
 
@@ -74,10 +75,16 @@ export default function UI() {
         element.remove();
     }
 
+    const updateCurrentSongInfo = (song) => {
+        const text = `${song.name} by ${song.author}`
+        songInfoDiv.textContent = text
+    }
+
     return {
         addToSongs,
         addToPlaylist,
         removeFromSongs,
-        removeFromPlaylist
+        removeFromPlaylist,
+        updateCurrentSongInfo
     }
 }

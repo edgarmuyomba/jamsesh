@@ -1,17 +1,43 @@
-export default musicPlayer = (() => {
+import UI from "./ui.js";
+
+export default (() => {
+
+    const audioElement = document.querySelector('audio')
+
+    const ui = UI()
 
     let isPlaying = false;
-    
-    const playPauseSong = () => {}
-    
-    const nextSong = () => {}
-    
-    const prevSong = () => {}
+
+    let currentSong = {}
+
+    const setCurrentState = (state) => {
+        setCurrentSong(state.currentSong)
+        isPlaying = state.isPlaying
+    }
+
+    const setCurrentSong = (song) => {
+        currentSong = song
+        ui.updateCurrentSongInfo(song)
+        audioElement.src = song.url
+        audioElement.load()
+    }
+
+    const playPauseSong = () => {
+        isPlaying ? audioElement.pause() : audioElement.play()
+        isPlaying = !isPlaying
+     }
+
+    const nextSong = () => { }
+
+    const prevSong = () => { }
 
     return {
         isPlaying,
+        currentSong,
+        setCurrentState,
+        setCurrentSong,
         playPauseSong,
-        nextSong, 
+        nextSong,
         prevSong
     }
 

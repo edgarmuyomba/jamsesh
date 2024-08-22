@@ -1,11 +1,16 @@
 import Playlist from './playlist.js'
 import SongList from './songList.js'
+import musicPlayer from './musicPlayer.js';
+import { EventListeners } from './eventListeners.js';
  
 export const websocket = new WebSocket('ws://127.0.0.1:8001/');
 
 export const playlistInstance = Playlist();
 
 export const songListInstance = SongList();
+
+const eventListeners = EventListeners();
+window.eventListeners = eventListeners;
 
 websocket.onopen = () => {
     const event = {
@@ -23,6 +28,7 @@ websocket.onmessage = ({ data }) => {
             // load the playlist and songs
             playlistInstance.addSongs(event.playlist)
             songListInstance.addSongs(event.songs)
+            musicPlayer.setCurrentState(event.state)
             break;
         case 'add':
             // update the playlist

@@ -1,5 +1,6 @@
 import { websocket } from "./script.js"
 import { songListInstance } from "./script.js";
+import musicPlayer from "./musicPlayer.js";
 
 export function EventListeners() {
 
@@ -33,8 +34,11 @@ export function EventListeners() {
         }
     }
 
+    const playPauseSong = () => musicPlayer.playPauseSong()
+
     return {
         addSongToPlaylist,
-        removeSongFromPlaylist
+        removeSongFromPlaylist,
+        playPauseSong
     }
 }
