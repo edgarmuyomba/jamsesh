@@ -1,6 +1,9 @@
+import MessageHandler from "./messageHandler.js";
+
 export default (function () {
     let websocket = new WebSocket('ws://192.168.100.19:8001/')
     let connected = false
+    let messageHandler = MessageHandler()
 
     const connect = () => {
         return new Promise((res, rej) => {
@@ -20,9 +23,14 @@ export default (function () {
             websocket.onclose = () => {
                 connected = false
             }
+
+            websocket.onmessage = ({ data }) => {
+                messageHandler.parseMessage(data)
+            }
+
         })
     }
-    
+
     let makeConnection = connect()
 
     const sendMessage = async (message) => {
