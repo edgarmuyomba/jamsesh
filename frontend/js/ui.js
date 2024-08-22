@@ -1,4 +1,3 @@
-import { EventListeners } from "./eventListeners.js";
 
 export default function UI() {
     const playlistDiv = document.querySelector('div.playlist ul');

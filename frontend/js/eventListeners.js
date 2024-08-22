@@ -42,9 +42,14 @@ export function EventListeners() {
         ui.updatePlayPauseSong(musicPlayer.isPlaying)
     }
 
+    const nextSong = () => {
+        musicPlayer.nextSong()
+    }
+
     return {
         addSongToPlaylist,
         removeSongFromPlaylist,
-        playPauseSong
+        playPauseSong,
+        nextSong
     }
 }

@@ -3,8 +3,6 @@ import UI from './ui.js';
 export default function Playlist() {
     var songs = [];
 
-    var currentSong = songs[0];
-
     const ui = UI();
 
     const addSongs = (newSongs) => {
@@ -26,18 +24,8 @@ export default function Playlist() {
         ui.removeFromPlaylist(song);
     }
 
-    const playNextSong = () => {
-        if (songs.length > 0) {
-            var song = songs.shift();
-            currentSong = songs[0];
-            ui.removeFromSongs(song);
-        }
-    }
-
     return {
         songs,
-        currentSong,
-        playNextSong,
         addSongs,
         addSong,
         removeSong

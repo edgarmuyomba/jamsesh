@@ -1,3 +1,4 @@
+import { playlistInstance } from "./script.js";
 import UI from "./ui.js";
 
 export default (() => {
@@ -28,7 +29,18 @@ export default (() => {
         isPlaying = !isPlaying
     }
 
-    const nextSong = () => { }
+    const nextSong = () => { 
+        const _songs = playlistInstance.songs
+        if (_songs.length > 0) {
+            let song = _songs[0]
+            setCurrentSong(song)
+            playlistInstance.removeSong(song)
+            if (isPlaying) {
+                audioElement.play()
+                isPlaying = true
+            }
+        }
+    }
 
     const prevSong = () => { }
 
