@@ -1,4 +1,5 @@
 import UI from "./ui.js";
+import websocketHandler from "./websocketHandler.js";
 
 export default (() => {
 
@@ -13,19 +14,20 @@ export default (() => {
     const setCurrentState = (state) => {
         setCurrentSong(state.currentSong)
         isPlaying = state.isPlaying
+        isPlaying ? audioElement.play() : null
     }
 
     const setCurrentSong = (song) => {
         currentSong = song
-        ui.updateCurrentSongInfo(song)
         audioElement.src = song.url
+        ui.updateCurrentSongInfo(song)
         audioElement.load()
     }
 
-    const playPauseSong = () => {
+    const playPauseSong = async () => {
         isPlaying ? audioElement.pause() : audioElement.play()
         isPlaying = !isPlaying
-     }
+    }
 
     const nextSong = () => { }
 

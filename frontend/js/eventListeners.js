@@ -37,8 +37,8 @@ export function EventListeners() {
         }
     }
 
-    const playPauseSong = () => {
-        musicPlayer.playPauseSong()
+    const playPauseSong = async () => {
+        await musicPlayer.playPauseSong()
         ui.updatePlayPauseSong(musicPlayer.isPlaying)
     }
 

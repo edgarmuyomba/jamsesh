@@ -1,5 +1,5 @@
 export default (function () {
-    let websocket = new WebSocket('ws://127.0.0.1:8001/')
+    let websocket = new WebSocket('ws://192.168.100.19:8001/')
     let connected = false
 
     const connect = () => {
@@ -35,7 +35,7 @@ export default (function () {
         }
     }
 
-    const receiveMessage = async (callback) => {
+    const receiveMessage = (callback) => {
         if (websocket) {
             websocket.onmessage = (event) => callback(event)
         }

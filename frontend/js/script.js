@@ -3,8 +3,8 @@ import SongList from './songList.js'
 import musicPlayer from './musicPlayer.js';
 import { EventListeners } from './eventListeners.js';
 import websocket from './websocketHandler.js';
- 
-// export const websocket = websocketHandler();
+import UI from './ui.js';
+
 
 export const playlistInstance = Playlist();
 
@@ -13,18 +13,13 @@ export const songListInstance = SongList();
 const eventListeners = EventListeners();
 window.eventListeners = eventListeners;
 
-// websocket.onopen = () => {
-//     const event = {
-//         type: 'connect'
-//     }
-//     websocket.send(JSON.stringify(event))
-// }
+const ui = UI();
 
 
-websocket.onmessage = ({ data }) => {
+const handler = ({ data }) => {
     const event = JSON.parse(data);
 
-    switch(event.type) {
+    switch (event.type) {
         case 'connect':
             // load the playlist and songs
             playlistInstance.addSongs(event.playlist)
@@ -45,3 +40,5 @@ websocket.onmessage = ({ data }) => {
             }
     }
 }
+
+websocket.receiveMessage(handler);
