@@ -3,7 +3,7 @@ songs = [
         'id': 0,
         'name': 'Champagne Poetry',
         'artist': 'Drake',
-        'url': 'Drake- Champagne Poetry.mp3'
+        'url': 'Drake - Champagne Poetry.mp3'
     },
     {
         'id': 1,
@@ -36,51 +36,51 @@ songs = [
         'url': 'ABBA - The Winner Takes It All.mp3'
     },
     {
-        'id': 5,
+        'id': 6,
         'name': 'Beautiful',
         'artist': 'Eminem',
         'url': 'Eminem - Beautiful.mp3'
     },
     {
-        'id': 5,
+        'id': 7,
         'name': 'Godzilla',
         'artist': 'Eminem ft. Juice WRLD',
         'url': 'Eminem - Godzilla ft. Juice WRLD.mp3'
     },
     {
-        'id': 5,
+        'id': 8,
         'name': 'Mockingbird',
         'artist': 'Eminem',
         'url': 'Eminem - Mockingbird.mp3'
     },
     {
-        'id': 5,
+        'id': 9,
         'name': 'Not Afraid',
         'artist': 'Eminem',
         'url': 'Eminem - Not Afraid.mp3'
     },
     {
-        'id': 5,
+        'id': 10,
         'name': 'Space Bound',
         'artist': 'Eminem',
         'url': 'Eminem - Space Bound.mp3'
     },
     {
-        'id': 5,
+        'id': 11,
         'name': 'Love Yourz',
         'artist': 'J Cole',
         'url': 'Love Yourz.mp3'
     },
     {
-        'id': 5,
+        'id': 12,
         'name': 'Snooze',
         'artist': 'SZA',
         'url': 'SZA - Snooze.mp3'
     },
     {
-        'id': 5,
+        'id': 13,
         'name': 'Atlantis',
         'artist': 'Seafret',
-        'url': 'SSeafret - Atlantis.mp3'
+        'url': 'Seafret - Atlantis.mp3'
     }
 ]

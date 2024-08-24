@@ -11,7 +11,7 @@ playlist = [
         'id': 0,
         'name': 'Champagne Poetry',
         'artist': 'Drake',
-        'url': 'Drake- Champagne Poetry.mp3'
+        'url': 'Drake - Champagne Poetry.mp3'
     }
 ]
 
