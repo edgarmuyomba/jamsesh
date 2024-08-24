@@ -1,5 +1,6 @@
 import play from "../assets/play.png";
 import pause from "../assets/pause.png";
+import musicIcon from "../assets/music.png";
 
 
 export default function UI() {
@@ -7,7 +8,7 @@ export default function UI() {
     const songsDiv = document.querySelector('div.songs ul');
     const songInfoDiv = document.querySelector('div.info > p.text')
     const playPauseImage = document.querySelector('div.playpause img')
-    const coverArtDiv = document.querySelector('div.album img');
+    const coverArtDiv = document.querySelector('div.album');
 
     const newSong = (song, isSong = false) => {
         const listItem = document.createElement('li');
@@ -16,6 +17,7 @@ export default function UI() {
         songDiv.classList.add('song');
         const icon = document.createElement('span');
         icon.classList.add('icon');
+        icon.style.backgroundImage = `url(${musicIcon})`;
         songDiv.appendChild(icon);
         const details = document.createElement('div');
         details.classList.add('details');
@@ -38,11 +40,11 @@ export default function UI() {
             addButton.onclick = eventListeners.addSongToPlaylist;
             buttons.appendChild(addButton);
         } else {
-            const playButton = document.createElement('button');
-            playButton.dataset.id = song.id;
-            playButton.innerHTML = `<svg fill="green" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><title>play</title><path d="M8,5.14V19.14L19,12.14L8,5.14Z" /></svg>`;
-            // onclick
-            buttons.appendChild(playButton);
+            // const playButton = document.createElement('button');
+            // playButton.dataset.id = song.id;
+            // playButton.innerHTML = `<svg fill="green" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><title>play</title><path d="M8,5.14V19.14L19,12.14L8,5.14Z" /></svg>`;
+            // // onclick
+            // buttons.appendChild(playButton);
             const delButton = document.createElement('button');
             delButton.dataset.id = song.id;
             delButton.innerHTML = `<svg fill="red" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><title>trash-can</title><path d="M9,3V4H4V6H5V19A2,2 0 0,0 7,21H17A2,2 0 0,0 19,19V6H20V4H15V3H9M9,8H11V17H9V8M13,8H15V17H13V8Z" /></svg>`;
@@ -89,7 +91,7 @@ export default function UI() {
     }
 
     const updateCoverArt = (url) => {
-        coverArtDiv.src = url;
+        coverArtDiv.style.backgroundImage = `url(${url})`;
     }
 
     return {

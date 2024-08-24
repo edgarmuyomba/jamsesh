@@ -13,23 +13,41 @@ div.album {
     background-color: lightgray;
     border-radius: 5px;
     overflow: hidden;
-}
-
-div.album > img {
-    height: 100%;
+    background-size: cover;
+    background-position: center;
 }
 
 div.info {
     height: 5%;
-    background-color: rgb(231, 231, 231);
+    /* background-color: rgb(231, 231, 231); */
     width: 100%;
     display: flex;
-    align-items: center;
+    align-items: start;
+    justify-content: center;
+    flex-direction: column;
     padding: 0 0.3rem;
+    gap: 0.5rem;
 }
 
 div.info p.text {
     font-size: 0.8rem;
+}
+
+div.slider_container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.6rem;
+    width: 100%;
+}
+
+input.seek_slider {
+    width: 90%;
+    pointer-events: none;
+}
+
+div.current-time, div.total-duration {
+    font-size: 0.7rem;
 }
 
 div.controls {

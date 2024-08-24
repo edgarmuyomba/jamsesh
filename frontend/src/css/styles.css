@@ -2,7 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif, Geneva, Tahoma, sans-serif;
     font-size: calc(0.7vw + 0.7vh);
 }
 
@@ -30,8 +30,10 @@ div.header {
     gap: 0.5rem;
 }
 
-p.subtitle {
+a.subtitle {
     font-size: 0.65rem;
+    text-decoration: none;
+    color: rgb(9, 77, 167);
 }
 
 div.container {
@@ -87,9 +89,10 @@ div.song {
 }
 
 .song span.icon {
-    width: 15%;
+    width: 20%;
     height: 100%;
-    background-color: lightgray;
+    background-position: center;
+    background-size: cover;
 }
 
 .details {

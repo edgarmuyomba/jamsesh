@@ -1,7 +1,7 @@
 import MessageHandler from "./messageHandler.js";
 
 export default (function () {
-    let websocket = new WebSocket('ws://127.0.0.1:8001/')
+    let websocket = new WebSocket('ws://192.168.119.96:8001/')
     let connected = false
     let messageHandler = MessageHandler()
     let messageQueue = []

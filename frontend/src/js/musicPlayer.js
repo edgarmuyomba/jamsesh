@@ -2,6 +2,7 @@ import { playlistInstance } from "./script.js";
 import UI from "./ui.js";
 import websocketHandler from "./websocketHandler.js";
 import FirebaseHandler from "./FirebaseHandler.js";
+import ProgressIndicator from "./ProgressIndicator.js";
 
 export default (() => {
 
@@ -22,6 +23,7 @@ export default (() => {
     const setCurrentSong = (song) => {
         currentSong = song
         ui.updateCoverArt(song.image)
+        ProgressIndicator.initializeTrack();
         FirebaseHandler.getStreamUrl(song.url)
         .then((url) => audioElement.src = url);
         ui.updateCurrentSongInfo(song)
@@ -47,8 +49,6 @@ export default (() => {
         }
     }
 
-    const prevSong = () => { }
-
     return {
         get isPlaying() { return isPlaying },
         get currentSong() { return currentSong },
@@ -56,7 +56,6 @@ export default (() => {
         setCurrentSong,
         playPauseSong,
         nextSong,
-        prevSong
     }
 
 })();

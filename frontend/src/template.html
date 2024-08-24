@@ -10,7 +10,7 @@
 <body>
     <div class="header">
         <h3 class="title">Jam Sesh</h3>
-        <p class="subtitle">&copy; Edgar Muyomba</p>
+        <a href="https://github.com/edgarmuyomba" class="subtitle">&copy; Edgar Muyomba</a>
     </div>
     <div class="container">
         <div class="playlist">
@@ -46,12 +46,16 @@
         </div>
         <div class="current">
             <div class="album">
-                <img alt="">
                 <!-- album cover art from the cover art archieve coverartarchive.org -->
             </div>
-            <audio></audio>
+            <audio onended="eventListeners.nextSong()"></audio>
             <div class="info">
                 <p class="text">Song 2 by artist 2</p>
+                <div class="slider_container">
+                    <div class="current-time">00:00</div>
+                    <input type="range" min="1" max="100" value="0" class="seek_slider" onchange="seekTo()">
+                    <div class="total-duration">00:00</div>
+                </div>
             </div>
             <div class="controls">
                 <!-- <div class="prev">
