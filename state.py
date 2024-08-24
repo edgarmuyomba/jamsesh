@@ -4,7 +4,7 @@ class State:
             'id': 1,
             'name': f'On & On',
             'author': f'Cartoon, Jéja',
-            'url': f'music/Cartoon, Jéja - On & On (feat. Daniel Levi) [NCS Release].mp3'
+            'url': f'Cartoon, Jéja - On & On (feat. Daniel Levi) [NCS Release].mp3'
         }
         self.isPlaying = False
     
