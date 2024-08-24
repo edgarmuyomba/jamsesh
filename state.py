@@ -1,14 +1,14 @@
 class State:
     def __init__(self) -> None:
         self.currentSong = {
-            'id': 1,
-            'name': f'On & On',
-            'author': f'Cartoon, Jéja',
-            'url': f'Cartoon, Jéja - On & On (feat. Daniel Levi) [NCS Release].mp3'
+            'id': 5,
+            'name': 'Atlantis',
+            'artist': 'Seafret',
+            'url': 'SSeafret - Atlantis.mp3'
         }
         self.isPlaying = False
-    
-    @property 
+
+    @property
     def currentState(self):
         return {
             'currentSong': self.currentSong,

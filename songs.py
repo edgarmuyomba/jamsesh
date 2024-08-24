@@ -1,32 +1,86 @@
 songs = [
     {
         'id': 0,
-        'name': 'Follow Back',
-        'author': 'LXNGVX',
-        'url': 'LXNGVX - Follow Back [NCS Release].mp3'
+        'name': 'Champagne Poetry',
+        'artist': 'Drake',
+        'url': 'Drake- Champagne Poetry.mp3'
     },
     {
         'id': 1,
-        'name': 'On & On',
-        'author': 'Cartoon, Jéja',
-        'url': 'Cartoon, Jéja - On & On (feat. Daniel Levi) [NCS Release].mp3'
+        'name': 'Like Toy Soldiers',
+        'artist': 'Eminem',
+        'url': 'Eminem - Like Toy Soldiers.mp3'
     },
     {
         'id': 2,
-        'name': 'Royalty',
-        'author': 'Egzod, Maestro Chives, Neoni',
-        'url': 'Egzod, Maestro Chives, Neoni - Royalty [NCS Release].mp3'
+        'name': 'Stan',
+        'artist': 'Eminem ft. Dido',
+        'url': 'Eminem - Stan ft. Dido.mp3'
     },
     {
         'id': 3,
-        'name': 'Always Be',
-        'author': 'Netrum',
-        'url': 'Netrum - Always Be [NCS Release].mp3'
+        'name': "When I'm Gone",
+        'artist': 'Eminem',
+        'url': "Eminem - When I'm Gone.mp3"
     },
     {
         'id': 4,
-        'name': 'Mortals',
-        'author': 'Warriyo',
-        'url': 'Warriyo - Mortals (feat. Laura Brehm) [NCS Release].mp3'
+        'name': 'Sing For The Moment',
+        'artist': 'Eminem',
+        'url': 'Eminem - Sing For The Moment.mp3'
     },
+    {
+        'id': 5,
+        'name': 'The Winner Takes It All',
+        'artist': 'ABBA',
+        'url': 'ABBA - The Winner Takes It All.mp3'
+    },
+    {
+        'id': 5,
+        'name': 'Beautiful',
+        'artist': 'Eminem',
+        'url': 'Eminem - Beautiful.mp3'
+    },
+    {
+        'id': 5,
+        'name': 'Godzilla',
+        'artist': 'Eminem ft. Juice WRLD',
+        'url': 'Eminem - Godzilla ft. Juice WRLD.mp3'
+    },
+    {
+        'id': 5,
+        'name': 'Mockingbird',
+        'artist': 'Eminem',
+        'url': 'Eminem - Mockingbird.mp3'
+    },
+    {
+        'id': 5,
+        'name': 'Not Afraid',
+        'artist': 'Eminem',
+        'url': 'Eminem - Not Afraid.mp3'
+    },
+    {
+        'id': 5,
+        'name': 'Space Bound',
+        'artist': 'Eminem',
+        'url': 'Eminem - Space Bound.mp3'
+    },
+    {
+        'id': 5,
+        'name': 'Love Yourz',
+        'artist': 'J Cole',
+        'url': 'Love Yourz.mp3'
+    },
+    {
+        'id': 5,
+        'name': 'Snooze',
+        'artist': 'SZA',
+        'url': 'SZA - Snooze.mp3'
+    },
+    {
+        'id': 5,
+        'name': 'Atlantis',
+        'artist': 'Seafret',
+        'url': 'SSeafret - Atlantis.mp3'
+    }
 ]
