@@ -9,6 +9,9 @@ export default function UI() {
     const songInfoDiv = document.querySelector('div.info > p.text')
     const playPauseImage = document.querySelector('div.playpause img')
     const coverArtDiv = document.querySelector('div.album');
+    const loadingIcon = document.querySelector('div.shapes');
+
+    let loading = false;
 
     const newSong = (song, isSong = false) => {
         const listItem = document.createElement('li');
@@ -91,7 +94,24 @@ export default function UI() {
     }
 
     const updateCoverArt = (url) => {
-        coverArtDiv.style.backgroundImage = `url(${url})`;
+        coverArtDiv.style.backgroundImage = null;
+        toggleLoading();
+        const img = new Image();
+        img.src = url;
+        img.onload = () => {
+            coverArtDiv.style.backgroundImage = `url(${url})`;
+            toggleLoading();
+        }
+    }
+
+    const toggleLoading = () => {
+        if (loading) {
+            loadingIcon.style.display = 'none';
+        } else {
+            loadingIcon.style.display = 'block';
+        }
+
+        loading = !loading;
     }
 
     return {

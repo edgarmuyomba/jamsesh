@@ -5,7 +5,7 @@ import FirebaseHandler from "./FirebaseHandler.js";
 import ProgressIndicator from "./ProgressIndicator.js";
 
 export default (() => {
-
+ 
     const audioElement = document.querySelector('audio')
 
     const ui = UI()

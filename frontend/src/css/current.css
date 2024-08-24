@@ -15,6 +15,9 @@ div.album {
     overflow: hidden;
     background-size: cover;
     background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 div.info {

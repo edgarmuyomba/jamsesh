@@ -1,0 +1,35 @@
+div.shapes {
+    display: none;
+    width: 32px;
+    height: 32px;
+    color: #094da7;
+    background: linear-gradient(currentColor 0 0),
+        linear-gradient(currentColor 0 0),
+        linear-gradient(currentColor 0 0),
+        linear-gradient(currentColor 0 0);
+    background-size: 17px 17px;
+    background-repeat: no-repeat;
+    animation: shapes-53h9rpsm 1.5s infinite cubic-bezier(0.3, 1, 0, 1);
+}
+
+@keyframes shapes-53h9rpsm {
+    0% {
+        background-position: 0 0, 100% 0, 100% 100%, 0 100%;
+    }
+
+    33% {
+        background-position: 0 0, 100% 0, 100% 100%, 0 100%;
+        width: 48px;
+        height: 48px;
+    }
+
+    66% {
+        background-position: 100% 0, 100% 100%, 0 100%, 0 0;
+        width: 48px;
+        height: 48px;
+    }
+
+    100% {
+        background-position: 100% 0, 100% 100%, 0 100%, 0 0;
+    }
+}
