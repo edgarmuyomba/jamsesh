@@ -22,10 +22,10 @@ export default function UI() {
         name.classList.add('name');
         name.textContent = song.name;
         details.appendChild(name);
-        const author = document.createElement('p');
-        author.classList.add('author');
-        author.textContent = song.author;
-        details.appendChild(author);
+        const artist = document.createElement('p');
+        artist.classList.add('artist');
+        artist.textContent = song.artist;
+        details.appendChild(artist);
         songDiv.appendChild(details);
         const buttons = document.createElement('div');
         buttons.classList.add('buttons');
@@ -77,7 +77,7 @@ export default function UI() {
     }
 
     const updateCurrentSongInfo = (song) => {
-        const text = `${song.name} by ${song.author}`
+        const text = `${song.name} by ${song.artist}`
         songInfoDiv.textContent = text
     }
 
