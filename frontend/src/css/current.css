@@ -12,7 +12,6 @@ div.album {
     width: 100%;
     background-color: lightgray;
     border-radius: 5px;
-    overflow: hidden;
     background-size: cover;
     background-position: center;
     display: flex;

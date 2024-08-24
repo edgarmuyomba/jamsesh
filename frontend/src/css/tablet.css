@@ -1,0 +1,25 @@
+@media(max-width: 1024px) {
+    body {
+        padding: 0;
+    }
+
+    div.header {
+        width: 95%;
+    }
+
+    div.container {
+        width: 95%;
+    }
+
+    li {
+        margin-left: 0.5rem;
+    }
+
+    .song span.icon {
+        display: none;
+    }
+
+    div.controls img {
+        height: 70%;
+    }
+}
