@@ -25,9 +25,12 @@ export default (() => {
         ui.updateCoverArt(song.image)
         ProgressIndicator.initializeTrack();
         FirebaseHandler.getStreamUrl(song.url)
-        .then((url) => audioElement.src = url);
-        ui.updateCurrentSongInfo(song)
-        audioElement.load()
+            .then((url) => {
+                audioElement.src = url
+                ui.updateCurrentSongInfo(song)
+                audioElement.load()
+            }
+            );
     }
 
     const playPauseSong = () => {
@@ -35,7 +38,7 @@ export default (() => {
         isPlaying = !isPlaying
     }
 
-    const nextSong = async (sendMessage = true) => { 
+    const nextSong = async (sendMessage = true) => {
         const _songs = playlistInstance.songs
         if (_songs.length > 0) {
             let song = _songs[0]
