@@ -7,6 +7,7 @@ export default function UI() {
     const songsDiv = document.querySelector('div.songs ul');
     const songInfoDiv = document.querySelector('div.info > p.text')
     const playPauseImage = document.querySelector('div.playpause img')
+    const coverArtDiv = document.querySelector('div.album img');
 
     const newSong = (song, isSong = false) => {
         const listItem = document.createElement('li');
@@ -87,12 +88,17 @@ export default function UI() {
             playPauseImage.src = play
     }
 
+    const updateCoverArt = (url) => {
+        coverArtDiv.src = url;
+    }
+
     return {
         addToSongs,
         addToPlaylist,
         removeFromSongs,
         removeFromPlaylist,
         updateCurrentSongInfo,
-        updatePlayPauseSong
+        updatePlayPauseSong,
+        updateCoverArt
     }
 }

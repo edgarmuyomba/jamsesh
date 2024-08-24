@@ -1,7 +1,6 @@
 import { playlistInstance } from "./script.js";
 import UI from "./ui.js";
 import websocketHandler from "./websocketHandler.js";
-import musicMap from "./musicMap.js";
 import FirebaseHandler from "./FirebaseHandler.js";
 
 export default (() => {
@@ -22,6 +21,7 @@ export default (() => {
 
     const setCurrentSong = (song) => {
         currentSong = song
+        ui.updateCoverArt(song.image)
         FirebaseHandler.getStreamUrl(song.url)
         .then((url) => audioElement.src = url);
         ui.updateCurrentSongInfo(song)

@@ -52,6 +52,7 @@ div.playlist, div.current, div.songs {
 
 div.playlist, div.songs {
     width: 25%;
+    overflow-y: scroll;
 }
 
 div.current {

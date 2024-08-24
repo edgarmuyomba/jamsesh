@@ -12,6 +12,11 @@ div.album {
     width: 100%;
     background-color: lightgray;
     border-radius: 5px;
+    overflow: hidden;
+}
+
+div.album > img {
+    height: 100%;
 }
 
 div.info {
