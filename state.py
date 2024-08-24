@@ -14,3 +14,6 @@ class State:
             'currentSong': self.currentSong,
             'isPlaying': self.isPlaying
         }
+
+    def setCurrentSong(self, song):
+        self.currentSong = song
