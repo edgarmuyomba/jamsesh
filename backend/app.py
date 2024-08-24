@@ -55,6 +55,10 @@ async def handler(websocket):
             event = {
                 'type': 'next'
             }
+            if len(playlist) > 0:
+                song = playlist[0]
+                state.setCurrentSong(song)
+                playlist.remove(song)
             for client in clients:
                 if client != websocket:
                     await client.send(json.dumps(event))
