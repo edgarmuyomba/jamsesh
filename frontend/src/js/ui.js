@@ -1,3 +1,6 @@
+import play from "../assets/play.png";
+import pause from "../assets/pause.png";
+
 
 export default function UI() {
     const playlistDiv = document.querySelector('div.playlist ul');
@@ -80,8 +83,8 @@ export default function UI() {
 
     const updatePlayPauseSong = (isPlaying) => {
         isPlaying ?
-            playPauseImage.src = 'assets/pause.png' :
-            playPauseImage.src = 'assets/play.png'
+            playPauseImage.src = pause :
+            playPauseImage.src = play
     }
 
     return {

@@ -1,6 +1,7 @@
 import { playlistInstance } from "./script.js";
 import UI from "./ui.js";
 import websocketHandler from "./websocketHandler.js";
+import musicMap from "./musicMap.js";
 
 export default (() => {
 
@@ -20,7 +21,8 @@ export default (() => {
 
     const setCurrentSong = (song) => {
         currentSong = song
-        audioElement.src = song.url
+        console.log(song.url);
+        audioElement.src = musicMap[song.url]
         ui.updateCurrentSongInfo(song)
         audioElement.load()
     }

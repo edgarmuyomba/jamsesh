@@ -11,7 +11,7 @@ playlist = [
         'id': 0,
         'name': 'Follow Back',
         'author': 'LXNGVX',
-        'url': 'music/LXNGVX - Follow Back [NCS Release].mp3'
+        'url': 'LXNGVX - Follow Back [NCS Release].mp3'
     }
 ]
 

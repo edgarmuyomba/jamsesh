@@ -1,6 +1,7 @@
 import UI from './ui.js';
 
 export default function Playlist() {
+
     var songs = [];
 
     const ui = UI();
@@ -24,6 +25,7 @@ export default function Playlist() {
             ui.removeFromPlaylist(song);
         }
     }
+
 
     return {
         songs,
