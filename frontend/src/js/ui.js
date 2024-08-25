@@ -2,7 +2,6 @@ import play from "../assets/play.png";
 import pause from "../assets/pause.png";
 import musicIcon from "../assets/music.png";
 
-
 export default function UI() {
     const playlistDiv = document.querySelector('div.playlist ul');
     const songsDiv = document.querySelector('div.songs ul');

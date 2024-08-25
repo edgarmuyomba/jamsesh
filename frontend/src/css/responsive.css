@@ -70,9 +70,13 @@
 
     div.info {
         position: absolute;
-        bottom: 13%;
-        left: 1rem;
-        width: 95%;
+        bottom: 10%;
+        /* left: 1rem; */
+        width: 100%;
+        backdrop-filter: blur(10px);
+        background-color: rgba(70, 70, 70, 0.178);
+        height: auto;
+        padding: 1rem;
     }
 
     div.info p.text {
@@ -169,7 +173,8 @@
         /* border: 1px solid red; */
         height: 10%;
         gap: 0.7rem;
-        background-color: lightgray;
+        background-color: rgba(211, 211, 211, 0.178);
+        backdrop-filter: blur(10px);
     }
 
     div.container > .selected {

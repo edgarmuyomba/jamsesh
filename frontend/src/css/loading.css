@@ -33,3 +33,11 @@ div.shapes {
         background-position: 100% 0, 100% 100%, 0 100%, 0 0;
     }
 }
+
+@media(max-width: 767px) {
+    div.shapes {
+        width: 19.2px;
+        height: 19.2px;
+        background-size: 10.6px 10.6px;
+    }
+}
