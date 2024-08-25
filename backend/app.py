@@ -3,6 +3,7 @@ import websockets
 import json
 from songs import songs
 from state import State
+import os
 
 clients = []
 
@@ -73,7 +74,8 @@ async def handler(websocket):
         clients.remove(websocket)
 
 async def main():
-    async with websockets.serve(handler, "", 8001):
+    port = os.env.get('PORT', 8001)
+    async with websockets.serve(handler, "0.0.0.0", port):
         await asyncio.Future()
 
 if __name__ == '__main__':
