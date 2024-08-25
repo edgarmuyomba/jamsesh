@@ -25,6 +25,9 @@ export default (() => {
             seekPosition = audioElement.currentTime * (100 / audioElement.duration);
             seek_slider.value = seekPosition;
 
+            const value = (seek_slider.value - seek_slider.min) / (seek_slider.max - seek_slider.min) * 100;
+            seek_slider.style.background = `linear-gradient(to right, rgb(23, 93, 185) ${value}%, white ${value}%)`;
+
             // Calculate the time left and the total duration
             let currentMinutes = Math.floor(audioElement.currentTime / 60);
             let currentSeconds = Math.floor(audioElement.currentTime - currentMinutes * 60);

@@ -131,3 +131,7 @@ div.buttons {
     justify-content: center;
     gap: 0.15rem;
 }
+
+div.selectList {
+    display: none;
+}

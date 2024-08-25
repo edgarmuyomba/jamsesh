@@ -1,0 +1,221 @@
+@media(max-width: 1024px) {
+    body {
+        padding: 0;
+    }
+
+    div.header {
+        width: 95%;
+    }
+
+    div.container {
+        width: 95%;
+    }
+
+    li {
+        margin: 0.2rem 0 0.2rem 0.5rem;
+    }
+
+    .song span.icon {
+        display: none;
+    }
+
+    div.song {
+        height: auto;
+    }
+
+    div.controls img {
+        height: 70%;
+    }
+
+    .details p.name {
+        font-size: 1rem;
+    }
+
+    .details p.artist {
+        font-size: 0.8rem;
+    }
+}
+
+@media(max-width: 767px) {
+    body {
+        justify-content: start;
+    }
+
+    div.header {
+        display: none;
+    }
+
+    div.container {
+        width: 100%;
+        display: grid;
+        grid-template-rows: 45% 5% 50%;
+        grid-template-columns: 50% 50%;
+        gap: 0;
+        height: 100%;
+    }
+
+    div.current {   
+        grid-area: 1 / 1 / 2 / 3;
+        width: 100%;
+        border-radius: 0;
+        padding: 0;
+        position: relative;
+        border: none;
+        gap: 0;
+    }
+
+    div.album {
+        border-radius: 0;
+    }
+
+    div.info {
+        position: absolute;
+        bottom: 13%;
+        left: 1rem;
+        width: 95%;
+    }
+
+    div.info p.text {
+        color: white;
+        font-size: 1.5rem;
+    }
+
+    div.current-time, div.total-duration {
+        color: white;
+        font-size: 0.85rem;
+    }
+
+    div.slider_container {
+        justify-content: space-between;
+    }
+
+    input[type="range"] {
+        -webkit-appearance: none;
+        width: 85%; 
+        height: 4px; 
+        background: linear-gradient(to right, rgb(23, 93, 185) 0%, white 0%); 
+        border-radius: 2px;
+        outline: none; 
+        padding: 0;
+        margin: 0;
+        transition: background 0.3s ease-in-out;
+    }
+    
+    input[type="range"]::-webkit-slider-thumb {
+        -webkit-appearance: none;
+        appearance: none;
+        width: 0; 
+        height: 0;
+        background: transparent; 
+    }
+    
+    input[type="range"]::-moz-range-thumb {
+        width: 0; 
+        height: 0;
+        background: transparent; 
+    }
+    
+    input[type="range"]::-ms-thumb {
+        width: 0; 
+        height: 0;
+        background: transparent; 
+    }
+    
+    input[type="range"]::-webkit-slider-runnable-track {
+        background: transparent;
+        border: none;
+    }
+    
+    input[type="range"]::-moz-range-track {
+        background: transparent;
+        border: none;
+    }
+    
+    input[type="range"]::-ms-track {
+        background: transparent;
+        border: none;
+        color: transparent;
+    }
+
+    div.selectList {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        height: 100%;
+        grid-area: 2 / 1 / 3 / 3;
+    }
+
+    .selectList #selectPlaylist, .selectList #selectSongs {
+        width: 50%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .selectList > * {
+        background-color: rgb(14, 40, 71);
+        font-size: 1.2rem;
+        color: white;
+    }
+
+    .selectList > .selected {
+        background-color: rgb(23, 93, 185);
+    }
+
+    div.controls {
+        width: 100%;
+        /* border: 1px solid red; */
+        height: 10%;
+        gap: 0.7rem;
+        background-color: lightgray;
+    }
+
+    div.container > .selected {
+        grid-area: 3 / 1 / 4 / 3;
+        display: block;
+    }
+
+    div.playlist, div.songs {
+        width: 100%;
+        border-radius: 0;
+        display: none;
+        padding: 1rem;
+    }
+
+    ul {
+        padding: 0;
+    }
+
+    li {
+        margin: 0 0 0.5rem 0;
+    }
+
+    div.songs .title, div.playlist .title {
+        display: none;
+    }
+
+    div.song {
+        height: 4rem;
+    }
+
+    .details p.name {
+        font-size: 1.2rem;
+    }
+
+    .details p.artist {
+        font-size: 1rem;
+    }
+
+    .song span.icon {
+        display: block;
+        width: 15%;
+        height: 100%;
+    }
+
+    .buttons {
+        margin-left: auto;
+    }
+    
+}
