@@ -3,3 +3,4 @@ music.txt
 music/
 __pycache__/
 node_modules/
+env/
