@@ -74,7 +74,7 @@ async def handler(websocket):
         clients.remove(websocket)
 
 async def main():
-    port = os.env.get('PORT', 8001)
+    port = os.environ.get("PORT", 8001)
     async with websockets.serve(handler, "0.0.0.0", port):
         await asyncio.Future()
 
