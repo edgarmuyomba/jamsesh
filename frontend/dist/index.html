@@ -1,1 +1,59 @@
-<!doctype html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Jam-Sesh</title><link rel="icon" href="72954e0d5827846e4a9b.png" type="image/x-icon"><script defer="defer" src="main.js"></script></head><body><div class="header"><h3 class="title">Jam Sesh</h3><a href="https://github.com/edgarmuyomba" class="subtitle">&copy; Edgar Muyomba</a></div><div class="container"><div class="playlist selected"><div class="title"><p class="text">Playlist</p></div><ul><li></li></ul></div><div class="current"><div class="album"><div class="shapes"></div></div><audio onended="eventListeners.nextSong()"></audio><div class="info"><p class="text"></p><div class="slider_container"><div class="current-time">00:00</div><input type="range" min="1" max="100" value="0" class="seek_slider" onchange="seekTo()"><div class="total-duration">00:00</div></div></div><div class="controls"><div class="playpause" onclick="eventListeners.playPauseSong()"><img src="3d6055c165a7b28ae7f2.png" alt=""></div><div class="next" onclick="eventListeners.nextSong()"><img src="018ac52ff1e0aaa9a6ba.png" alt=""></div></div></div><div class="songs"><div class="title"><p class="text">Song-List</p></div><ul><li></li></ul></div><div class="selectList"><div id="selectPlaylist" class="selected" onclick="eventListeners.displayPlaylist()">Playlist</div><div id="selectSongs" class="" onclick="eventListeners.displaySongs()">Songs</div></div></div></body></html>
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Jam-Sesh</title>
+    <link rel="icon" href="72954e0d5827846e4a9b.png" type="image/x-icon">
+    <script defer="defer" src="main.js"></script>
+</head>
+
+<body>
+    <div class="header">
+        <h3 class="title">Jam Sesh</h3><a href="https://github.com/edgarmuyomba" class="subtitle">&copy; Edgar
+            Muyomba</a>
+    </div>
+    <div class="container">
+        <div class="playlist selected">
+            <div class="title">
+                <p class="text">Playlist</p>
+            </div>
+            <ul>
+                <li></li>
+            </ul>
+        </div>
+        <div class="current">
+            <div class="album">
+                <div class="shapes"></div>
+            </div><audio onended="eventListeners.nextSong()"></audio>
+            <div class="info">
+                <p class="text"></p>
+                <div class="slider_container">
+                    <div class="current-time">00:00</div><input type="range" min="1" max="100" value="0"
+                        class="seek_slider" onchange="seekTo()">
+                    <div class="total-duration">00:00</div>
+                </div>
+            </div>
+            <div class="controls">
+                <div class="playpause" onclick="eventListeners.playPauseSong()"><img src="3d6055c165a7b28ae7f2.png"
+                        alt=""></div>
+                <div class="next" onclick="eventListeners.nextSong()"><img src="018ac52ff1e0aaa9a6ba.png" alt=""></div>
+            </div>
+        </div>
+        <div class="songs">
+            <div class="title">
+                <p class="text">Song-List</p>
+            </div>
+            <ul>
+                <li></li>
+            </ul>
+        </div>
+        <div class="selectList">
+            <div id="selectPlaylist" class="selected" onclick="eventListeners.displayPlaylist()">Playlist</div>
+            <div id="selectSongs" class="" onclick="eventListeners.displaySongs()">Songs</div>
+        </div>
+    </div>
+</body>
+
+</html>
