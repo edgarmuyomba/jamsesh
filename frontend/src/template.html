@@ -13,7 +13,7 @@
         <a href="https://github.com/edgarmuyomba" class="subtitle">&copy; Edgar Muyomba</a>
     </div>
     <div class="container">
-        <div class="playlist">
+        <div class="playlist selected">
             <div class="title">
                 <p class="text">Playlist</p>
             </div>
@@ -70,7 +70,7 @@
                 </div>
             </div>
         </div>
-        <div class="songs selected">
+        <div class="songs">
             <div class="title">
                 <p class="text">Song-List</p>
             </div>
@@ -95,10 +95,10 @@
             </ul>
         </div>
         <div class="selectList">
-            <div id="selectPlaylist" class="selected">
+            <div id="selectPlaylist" class="selected" onclick="eventListeners.displayPlaylist()">
                 Playlist
             </div>
-            <div id="selectSongs" class="">
+            <div id="selectSongs" class="" onclick="eventListeners.displaySongs()">
                 Songs
             </div>
         </div>

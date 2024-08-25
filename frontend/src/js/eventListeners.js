@@ -46,10 +46,20 @@ export function EventListeners() {
         musicPlayer.nextSong()
     }
 
+    const displayPlaylist = () => {
+        ui.toggleDisplay(true);
+    }
+
+    const displaySongs = () => {
+        ui.toggleDisplay(false);
+    }
+
     return {
         addSongToPlaylist,
         removeSongFromPlaylist,
         playPauseSong,
-        nextSong
+        nextSong,
+        displayPlaylist,
+        displaySongs
     }
 }

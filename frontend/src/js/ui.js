@@ -10,8 +10,14 @@ export default function UI() {
     const playPauseImage = document.querySelector('div.playpause img')
     const coverArtDiv = document.querySelector('div.album');
     const loadingIcon = document.querySelector('div.shapes');
+    const selectPlaylistDiv = document.querySelector('div#selectPlaylist');
+    const selectSongsDiv = document.querySelector('div#selectSongs');
+    const playlistContainer = document.querySelector('div.playlist');
+    const songsContainer = document.querySelector('div.songs');
 
     let loading = false;
+
+    let displayPlaylist = true;
 
     const newSong = (song, isSong = false) => {
         const listItem = document.createElement('li');
@@ -114,6 +120,24 @@ export default function UI() {
         loading = !loading;
     }
 
+    const toggleDisplay = (playlist = true) => {
+        if (playlist && !displayPlaylist) {
+            selectPlaylistDiv.classList.add('selected');
+            playlistContainer.classList.add('selected');
+            selectSongsDiv.classList.remove('selected');
+            songsContainer.classList.remove('selected');
+            displayPlaylist = true;
+        }
+
+        if (!playlist && displayPlaylist) {
+            selectPlaylistDiv.classList.remove('selected');
+            playlistContainer.classList.remove('selected');
+            selectSongsDiv.classList.add('selected');
+            songsContainer.classList.add('selected');
+            displayPlaylist = false;
+        }
+    }
+
     return {
         addToSongs,
         addToPlaylist,
@@ -121,6 +145,7 @@ export default function UI() {
         removeFromPlaylist,
         updateCurrentSongInfo,
         updatePlayPauseSong,
-        updateCoverArt
+        updateCoverArt,
+        toggleDisplay
     }
 }
